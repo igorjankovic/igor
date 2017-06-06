@@ -246,22 +246,29 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AccommodationController.cs" />
+    <Compile Include="Controllers\AccommodationTypeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706040304228_Initial.cs" />
-    <Compile Include="Migrations\201706040304228_Initial.Designer.cs">
-      <DependentUpon>201706040304228_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201706061052506_Migration1.cs" />
+    <Compile Include="Migrations\201706061052506_Migration1.Designer.cs">
+      <DependentUpon>201706061052506_Migration1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Accommodation.cs" />
+    <Compile Include="Models\AccommodationType.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BAContext.cs" />
     <Compile Include="Models\BAIdentityUser.cs" />
     <Compile Include="Models\AppUser.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\RoomReservations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Providers\CustomJwtFormat.cs" />
@@ -341,8 +348,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706040304228_Initial.resx">
-      <DependentUpon>201706040304228_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706061052506_Migration1.resx">
+      <DependentUpon>201706061052506_Migration1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
