@@ -1,0 +1,17 @@
+<form #f="ngForm"(ngSubmit)="onSubmmit(f.value)">
+  <div>
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" ngModel>
+    <input type="text" name="Code" ngModel>
+    <input type="submit" value="Send" ngModel>
+  </div>
+</form>
+<h1>
+  country-list works!
+</h1>
+
+<ul>
+  <li *ngFor="let c of countries"><contry[contry]="c"></contry></li>
+</ul>
+
+
