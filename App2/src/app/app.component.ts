@@ -1,5 +1,5 @@
 import { Component,EventEmitter } from '@angular/core';
-import{AccommodationType} from './accommodation-type/accommodation-type.model'
+//import{AccommodationType} from './accommodation-type/accommodation-type.model'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,13 +8,13 @@ import{AccommodationType} from './accommodation-type/accommodation-type.model'
 export class AppComponent {
   title = 'app';
 
-acctypes : AccommodationType[];
+//acctypes : AccommodationType[];
 
 constructor(){
-  this.acctypes =  [
-      new AccommodationType(12,"Hostel"),
-      new AccommodationType(15,"Motel")
-      ]
+ // this.acctypes =  [
+   //   new AccommodationType(12,"Hostel"),
+    //  new AccommodationType(15,"Motel")
+   //   ]
 }
 
 

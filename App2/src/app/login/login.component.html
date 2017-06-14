@@ -1,0 +1,15 @@
+<div *ngIf="isVisible">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<div>
+  
+      <label for="Username"> <font color="blue" face="verdana" >Username</font></label>
+      <input type="text" name="Username" ngModel>
+    </div>
+    <div>
+      <label for="Password"> <font color="blue" face="verdana" >Password<</label>
+      <input type="Password" name="Password" ngModel>
+    </div>
+    <input type="Submit" name="Submit">
+ </form>
+</div>
+
