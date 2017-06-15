@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 //import { AccommodationTypeComponent } from './accommodation-type/accommodation-type.component';
 //import { AccommodationComponent } from './accommodation/accommodation.component';
 import { LoginComponent } from './login/login.component';
+import { AddAccommodationTypeComponent } from './add-accommodation-type/add-accommodation-type.component';
+//import { AddAccommodationComponent } from './add-accommodation/add-accommodation.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { LoginComponent } from './login/login.component';
     //AccommodationTypeListComponent,
     //AccommodationTypeComponent,
     //AccommodationComponent,
-    LoginComponent
+    LoginComponent,
+    AddAccommodationTypeComponent,
+    //AddAccommodationComponent
     
   ],
   imports: [

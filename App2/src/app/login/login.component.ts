@@ -14,9 +14,6 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
-
-
-
   ngOnInit() {
   }
 
@@ -29,7 +26,5 @@ export class LoginComponent implements OnInit {
   toggle(){
     this.isVisible = !this.isVisible;
   }
-
-
 
 }
