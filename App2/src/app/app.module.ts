@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 //import { AccommodationTypeListComponent } from './accommodation-type-list/accommodation-type-list.component';
-//import { AccommodationTypeComponent } from './accommodation-type/accommodation-type.component';
-//import { AccommodationComponent } from './accommodation/accommodation.component';
+import { AccommodationTypeComponent } from './accommodation-type/accommodation-type.component';
+import { AccommodationComponent } from './accommodation/accommodation.component';
 import { LoginComponent } from './login/login.component';
 import { AddAccommodationTypeComponent } from './add-accommodation-type/add-accommodation-type.component';
+import { AccommodationListComponent } from './accommodation-list/accommodation-list.component';
 //import { AddAccommodationComponent } from './add-accommodation/add-accommodation.component';
 
 
@@ -15,10 +16,11 @@ import { AddAccommodationTypeComponent } from './add-accommodation-type/add-acco
   declarations: [
     AppComponent,
     //AccommodationTypeListComponent,
-    //AccommodationTypeComponent,
-    //AccommodationComponent,
+    AccommodationTypeComponent,
+    AccommodationComponent,
     LoginComponent,
     AddAccommodationTypeComponent,
+    AccommodationListComponent
     //AddAccommodationComponent
     
   ],

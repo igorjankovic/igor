@@ -10,26 +10,30 @@ export class AccommodationTypeListService{
 
   }
 
- getAll():Observable<any>{
-     let header = new Headers();
-     header.append('Content-Type','application/json');
-     let options = new RequestOptions();
-     options.headers = header;
+  getAll() : Observable<any> {
+        
+        let header = new Headers();
+        header.append('Content-Type', 'application/json');  
+        let options = new RequestOptions();
+        options.headers = header;
 
-     return this.http.get("hhtp://localhost:54042/api/AccommodationTypes",options);
+        let host = "localhost:54042";
+        return this.http.get(`http://${host}/api/AccommodationTypes`, options);
+    }
 
- }
- delete(id){
-     let token = localStorage.getItem("token");
-     let header = new Headers();
-     header.append('Content-Type','application/json');
-     
-    let options = new RequestOptions();
-    options.headers = header;
+     deleteAccommodationType(id: number) {
+        let token=localStorage.getItem("token");
+        let header = new Headers();
+        header.append('Content-Type', 'application/json');
+        header.append('Authorization', 'Bearer '+ JSON.parse(token).token);
 
-    let urlAddress = "hhtp://localhost:54042/api/AccommodationTypes";
-    return this.http.delete(urlAddress,options);
+        let options = new RequestOptions();
+        options.headers = header;
+        
+        let host ="localhost:54042";
+        let urlAddress = `http://${host}/api/AccommodationTypes/` + id;
+        return this.http.delete(urlAddress, options);
+    }
 
- }
 
 }

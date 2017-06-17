@@ -1,3 +1,12 @@
-<p>
-  accommodation works!
-</p>
+<div>  
+  Name: {{accommodation.Name}} <br/> 
+  Description: {{accommodation.Description}} <br />
+  Address: {{accommodation.Address}} <br/> 
+  Average grade: {{accommodation.AverageGrade}} <br/> 
+  Latitude: {{accommodation.Latitude}} <br/>
+  Longitude: {{accommodation.Longitude}} <br/>
+  Owner: {{ accommodation.Owner.Name + ' ' + accommodation.Owner.LastName}} <br/>
+  Place: {{ accommodation.Place.Name }} <br/>
+  Accommodation type: {{ accommodation.AccommodationType.Name }} <br/>
+ 
+</div>

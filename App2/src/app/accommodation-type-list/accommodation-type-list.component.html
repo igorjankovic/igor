@@ -1,5 +1,8 @@
-<ul>
-  <li *ngFor = "let accType of accommodationTypes ">
+<div>
+  <ul>
+  <li *ngFor="let accType of accommodationTypes"> 
+    <a [routerLink]="['/accommodationList', accType.Id, accType.Name, Origin, 'empty']"> {{accType.Name}} </a> 
   </li>
 </ul>
+</div>
 
