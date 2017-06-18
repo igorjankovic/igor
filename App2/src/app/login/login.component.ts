@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {Response} from '@angular/http';
+import{UserData} from "../user-data/user-data.model";
 
 
 @Component({
@@ -19,7 +21,9 @@ export class LoginComponent implements OnInit {
 
  onSubmit(form: NgForm) {
     console.log("Somthing");
-    
+  
+
+
     form.reset();
   }
 

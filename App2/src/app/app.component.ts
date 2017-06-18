@@ -1,5 +1,5 @@
-import { Component,EventEmitter } from '@angular/core';
-//import{AccommodationType} from './accommodation-type/accommodation-type.model'
+import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,13 +8,16 @@ import { Component,EventEmitter } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-//acctypes : AccommodationType[];
 
-constructor(){
- // this.acctypes =  [
-   //   new AccommodationType(12,"Hostel"),
-    //  new AccommodationType(15,"Motel")
-   //   ]
+  constructor( private router: Router){
+  }
+
+   ngOnInit() {
+    
+  }
+
+showAccommodationTypes() {
+    this.router.navigate(['/accommodationTypeList']);
 }
 
 

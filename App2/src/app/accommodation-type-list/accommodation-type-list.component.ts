@@ -1,17 +1,19 @@
 import { Component, OnInit,EventEmitter,Input,Output } from '@angular/core';
 import { AccommodationTypeListService } from './accommodation-type-list.service';
-import {Accommodation} from '../accommodation/accommodation.model';
+//import {Accommodation} from '../accommodation/accommodation.model';
 import {Router,ActivatedRoute} from '@angular/router';
 import { AccommodationType } from '../accommodation-type/accommodation-type.model';
+import { Response} from '@angular/http';
 
 @Component({
   selector: 'accommodation-type-list',
   templateUrl: './accommodation-type-list.component.html',
-  styleUrls: ['./accommodation-type-list.component.css']
+  styleUrls: ['./accommodation-type-list.component.css'],
+  providers: [AccommodationTypeListService]
 })
 export class AccommodationTypeListComponent  {
 accommodationTypes: AccommodationType[];
-  accommodation: AccommodationType;
+ // accommodation: AccommodationType;
   Message: string = "";
 
   constructor(private accommodationTypeService: AccommodationTypeListService, private router: Router) { 
@@ -20,6 +22,7 @@ accommodationTypes: AccommodationType[];
   }
 
   ngOnInit() {
+    let response: Response
     this.getAccommodationTypes()
   }
 
