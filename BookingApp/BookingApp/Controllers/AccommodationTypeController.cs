@@ -1,6 +1,7 @@
 ﻿using BookingApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -51,6 +52,31 @@ namespace BookingApp.Controllers
 
             return CreatedAtRoute("DefaultApi", new { controller = "AccommodationTypes", id = actype.Id }, actype);
         }
+
+        [HttpPut]
+        [Route("AccommodationTypes/{id}")]
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PutAccommodationType(int id, AccommodationType accommodationType)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != accommodationType.Id)
+            {
+                return BadRequest();
+            }
+
+            db.Entry(accommodationType).State = EntityState.Modified;
+
+            
+                db.SaveChanges();
+
+            return Ok();
+
+        }
+
         [HttpDelete]
         [Route("AccommodationTypes/{id}")]
         [ResponseType(typeof(AccommodationType))]
