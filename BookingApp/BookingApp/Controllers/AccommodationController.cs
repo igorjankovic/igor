@@ -45,7 +45,8 @@ namespace BookingApp.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            accommodation.Rooms = new List<Room>();
+            accommodation.Approved = true;
             db.Accommodations.Add(accommodation);
             db.SaveChanges();
 

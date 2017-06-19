@@ -19,8 +19,8 @@ namespace BookingApp.Migrations
                         Latitude = c.String(),
                         Longitude = c.String(),
                         ImaageURL = c.String(),
-                        Approved = c.Boolean(nullable: false),
-                        AccommodatonTypeId = c.Int(nullable: false),
+                        Approved = c.Boolean(nullable: true),
+                        AccommodatonTypeId = c.Int(nullable: true),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AccommodationTypes", t => t.AccommodatonTypeId, cascadeDelete: true)
@@ -43,8 +43,8 @@ namespace BookingApp.Migrations
                         RoomNumber = c.Int(nullable: false),
                         Bedcount = c.Int(nullable: false),
                         Description = c.String(),
-                        PricePerNight = c.Double(nullable: false),
-                        AccommodationId = c.Int(nullable: false),
+                        PricePerNight = c.Double(nullable: true),
+                        AccommodationId = c.Int(nullable: true),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Accommodations", t => t.AccommodationId, cascadeDelete: true)
