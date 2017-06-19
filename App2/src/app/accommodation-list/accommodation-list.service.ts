@@ -16,10 +16,7 @@ export class AccommodationListService {
         return this.http.get(`http://${host}/api/Accommodations`);
     }
 
-    getAllOData() : Observable<any> {
-         let host = "localhost:54042";
-        return this.http.get(`http://${host}/odata/AccOData`);
-    }
+   
 
     getByAccTypeId(id: number): Observable<any> {
          let host = "localhost:54042";

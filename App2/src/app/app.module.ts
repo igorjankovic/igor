@@ -10,17 +10,20 @@ import {AccommodationTypeListComponent} from './accommodation-type-list/accommod
 import {AccommodationTypeComponent} from './accommodation-type/accommodation-type.component';
 import { AddAccTypeComponent } from './add-acc-type/add-acc-type.component';
 import { EditAccTypeComponent } from './edit-acc-type/edit-acc-type.component';
-//import {AccommodationComponent} from './accommodation/accommodation.component';
+import {AccommodationComponent} from './accommodation/accommodation.component';
+import {AccommodationListComponent} from './accommodation-list/accommodation-list.component';
+import { AddAccommodationComponent } from './add-accommodation/add-accommodation.component';
 const ChildRoutes = [
    
  ]
 const Routes= [
-  // {path: "accommodation/:Id", component: AccommodationComponent},
-  //{path: "accommodationList/:Id/:Name/:Origin/:PlaceName", component: AccommodationListComponent},
+   {path: "accommodation/:Id", component: AccommodationComponent},
+  {path: "accommodationList/:Id/:Name/", component: AccommodationListComponent},
   {path: "accommodationTypeList", component: AccommodationTypeListComponent},
   {path: "accommodationType/:Id/:Name", component: AccommodationTypeComponent},
   {path: "addAccType",  component: AddAccTypeComponent},
-  {path: "editAccommodationType/:Id/:Name",  component: EditAccTypeComponent}
+  {path: "editAccommodationType/:Id/:Name",  component: EditAccTypeComponent},
+  {path: "addAccommodation",  component: AddAccommodationComponent},
 
 ]
 
@@ -32,7 +35,10 @@ const Routes= [
     AccommodationTypeListComponent,
     AccommodationTypeComponent,
     AddAccTypeComponent,
-    EditAccTypeComponent
+    EditAccTypeComponent,
+    AccommodationComponent,
+    AccommodationListComponent,
+    AddAccommodationComponent
    
   ],
   imports: [

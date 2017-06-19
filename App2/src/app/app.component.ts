@@ -20,5 +20,7 @@ showAccommodationTypes() {
     this.router.navigate(['/accommodationTypeList']);
 }
 
-
+ addAccommodation() {
+    this.router.navigate(['/addAccommodation']);
+  }
 }

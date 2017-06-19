@@ -4,9 +4,10 @@ import {AccommodationListService} from './accommodation-list.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-accommodation-list',
+  selector: 'accommodation-list',
   templateUrl: './accommodation-list.component.html',
-  styleUrls: ['./accommodation-list.component.css']
+  styleUrls: ['./accommodation-list.component.css'],
+  providers: [AccommodationListService]
 })
 export class AccommodationListComponent implements OnInit {
 
@@ -18,7 +19,7 @@ export class AccommodationListComponent implements OnInit {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private accListService: AccommodationListService) {
     activatedRoute.params.subscribe(params => {this.Id = params["Id"]; 
-                                               this.path = params["Name"]; 
+                                               this.path = params["Name"] 
     }
     );
    }

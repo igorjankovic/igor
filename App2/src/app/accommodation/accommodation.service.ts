@@ -21,10 +21,10 @@ export class AccommodationService {
     }
 
     delete(id) {
-        let token=localStorage.getItem("token");
+       
         let header = new Headers();
         header.append('Content-Type', 'application/json');
-        header.append('Authorization', 'Bearer '+ JSON.parse(token).token);
+       
 
         let options = new RequestOptions();
         options.headers = header;

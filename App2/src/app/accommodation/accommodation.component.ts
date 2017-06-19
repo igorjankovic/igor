@@ -8,22 +8,22 @@ import { AccommodationType } from '../accommodation-type/accommodation-type.mode
 @Component({
   selector: 'accommodation',
   templateUrl: './accommodation.component.html',
-  styleUrls: ['./accommodation.component.css']
+  styleUrls: ['./accommodation.component.css'],
+   providers: [AccommodationService]
 })
 export class AccommodationComponent implements OnInit {
 
 accommodationId: number;
   accommodation: Accommodation;
   accommodations: Accommodation[];
-  placeName: string;
+  
  constructor(private accommodationService: AccommodationService, private router: Router, private activatedRoute: ActivatedRoute,) { 
 
     activatedRoute.params.subscribe(params => {this.accommodationId = params["Id"];});
 
     this.accommodation = new Accommodation();
     this.accommodation.Owner = new User();
-    this.accommodation.Place = "";
-    this.accommodation.AccommodationType = new AccommodationType(0,"");
+    this.accommodation.AccommodationType = new AccommodationType();
    
 
   }
@@ -41,10 +41,9 @@ accommodationId: number;
 
   deleteAcc(id) {
     this.accommodationService.delete(id).subscribe(x => {alert("Accommodation deleted successfuly!");
-      this.router.navigate(['/accommodationList', this.accommodation.PlaceId, "Place", "Place", this.accommodation.Place])}, 
+      this.router.navigate(['/accommodationList'])}, 
       x => alert(x.json().Message));
   }
-
   editAcc(id, name, desc, address, latitude, longitude, averageGr, approved, accTypeId, placeId,ownerId) {
     this.router.navigate(['/editAcc', id, name, desc, address, latitude, longitude, averageGr, approved, accTypeId, placeId, ownerId]);
   }
