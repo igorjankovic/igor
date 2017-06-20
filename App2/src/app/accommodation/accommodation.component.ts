@@ -22,7 +22,6 @@ accommodationId: number;
     activatedRoute.params.subscribe(params => {this.accommodationId = params["Id"];});
 
     this.accommodation = new Accommodation();
-    this.accommodation.Owner = new User();
     this.accommodation.AccommodationType = new AccommodationType();
    
 
@@ -32,8 +31,8 @@ accommodationId: number;
       
      
       this.accommodationService.getById(this.accommodationId).subscribe(x => { this.accommodations = x.json();
-        this.accommodation = this.accommodations[0];
-        let host ="localhost:54042";
+        this.accommodation = this.accommodations;
+       
         
     });
 
@@ -44,8 +43,8 @@ accommodationId: number;
       this.router.navigate(['/accommodationList'])}, 
       x => alert(x.json().Message));
   }
-  editAcc(id, name, desc, address, latitude, longitude, averageGr, approved, accTypeId, placeId,ownerId) {
-    this.router.navigate(['/editAcc', id, name, desc, address, latitude, longitude, averageGr, approved, accTypeId, placeId, ownerId]);
+  editAcc(id, name, desc, address, latitude, longitude, averageGr, approved, accTypeId,) {
+    this.router.navigate(['/editAcc', id, name, desc, address, latitude, longitude, averageGr, approved, accTypeId]);
   }
 
 

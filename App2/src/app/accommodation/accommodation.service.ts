@@ -16,7 +16,7 @@ export class AccommodationService {
     getById(id: number) : Observable<any> {
 
         let host ="localhost:54042";
-        let urlAddress = `http://${host}/api/Accommodations` + id;
+        let urlAddress = `http://${host}/api/Accommodations/` + id;
         return this.http.get(urlAddress);
     }
 

@@ -1,11 +1,23 @@
 <div>  
   Name: {{accommodation.Name}} <br/> 
   Description: {{accommodation.Description}} <br />
-  Address: {{accommodation.Address}} <br/> 
-  Average grade: {{accommodation.AverageGrade}} <br/> 
+  Address: {{accommodation.Adress}} <br/> 
+  Average grade: {{accommodation.AvrageGrade}} <br/> 
   Latitude: {{accommodation.Latitude}} <br/>
   Longitude: {{accommodation.Longitude}} <br/>
-  Owner: {{ accommodation.Owner.Name + ' ' + accommodation.Owner.LastName}} <br/>
-  Accommodation type: {{ accommodation.AccommodationType.Name }} <br/>
+  Accommodation type: {{ accommodation.AccommodatonType.Name }} <br/>
  
 </div>
+<div>
+  <button (click)="deleteAcc(accommodation.Id)"> 
+      <b> Delete Accommodation </b> 
+    </button>
+
+    <button (click)="editAcc(accommodation.Id, accommodation.Name, accommodation.Description, accommodation.Address, accommodation.Latitude, accommodation.Longitude,
+      accommodation.AverageGrade, accommodation.Approved, accommodation.AccommodatonTypeId, accommodation.ImageUrl)"> 
+      <b> Edit Accommodation </b> 
+    </button>
+</div> 
+<br> 
+<a [routerLink]="['/roomList', accommodation.Id, accommodation.Name]"> Rooms </a>
+ 

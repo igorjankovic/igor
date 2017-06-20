@@ -12,19 +12,17 @@ export class AddAccommodationService {
     }
 
     create(accommodation: Accommodation) : Observable<any> {
-        let formData: FormData = new FormData();
-        formData.append('accommodation', JSON.stringify(accommodation));
-        
-        
+       
         
         let header = new Headers();
         header.append('Accept', 'application/json');
-        header.append('enctype', 'multipart/form-data');
+        header.append('Content-Type', 'application/json');
 
         let options = new RequestOptions();
         options.headers = header;
         
         let host = "localhost:54042";
-        return this.http.post(`http://${host}/api/Accommodations`, formData, options);
+          let urlAddress =`http://${host}/api/Accommodations`
+        return this.http.post(urlAddress, JSON.stringify(accommodation), options);
     }
 }

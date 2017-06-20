@@ -25,13 +25,10 @@ export class AccommodationListComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.Accommodations = [];
+   
     this.accListService.getAll().subscribe( x => this.Accommodations=x.json());
     
-    //        this.accListService.getAll().subscribe(x => {
-     //         this.Accommodations = (x.json()).value;
-       //     }
-        //    )
+  
              
 }
   }

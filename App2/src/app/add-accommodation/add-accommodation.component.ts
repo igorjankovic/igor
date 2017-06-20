@@ -35,8 +35,8 @@ export class AddAccommodationComponent implements OnInit {
 onSubmit() {
     
     
-    let newAccommodation = new Accommodation(1, this.Name, this.Description, this.Address, 0, this.Latitude, this.Longitude, "", false,
-      this.AccommodationTypeId,1);
+    let newAccommodation = new Accommodation(1, this.Name, this.Description, this.Address,4, this.Latitude, this.Longitude, "", true,
+      8);
 
     this.addAccommodationService.create(newAccommodation).subscribe(x => 
     { 

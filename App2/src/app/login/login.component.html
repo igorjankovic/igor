@@ -1,5 +1,5 @@
- <i>Login</i>
-<div *ngIf="isVisible">
+ <p><font color="blue" face="verdana">Login</font></p>
+<div >
 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
 <div>
   
@@ -11,6 +11,8 @@
       <input type="Password" name="Password" ngModel>
     </div>
     <input type="Submit" name="Submit">
+    <br>
+   
  </form>
 </div>
 

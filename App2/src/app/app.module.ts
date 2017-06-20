@@ -13,6 +13,9 @@ import { EditAccTypeComponent } from './edit-acc-type/edit-acc-type.component';
 import {AccommodationComponent} from './accommodation/accommodation.component';
 import {AccommodationListComponent} from './accommodation-list/accommodation-list.component';
 import { AddAccommodationComponent } from './add-accommodation/add-accommodation.component';
+import { EditAccommodationComponent } from './edit-accommodation/edit-accommodation.component';
+import { RoomComponent } from './room/room.component';
+import { RoomListComponent } from './room-list/room-list.component';
 const ChildRoutes = [
    
  ]
@@ -24,6 +27,10 @@ const Routes= [
   {path: "addAccType",  component: AddAccTypeComponent},
   {path: "editAccommodationType/:Id/:Name",  component: EditAccTypeComponent},
   {path: "addAccommodation",  component: AddAccommodationComponent},
+  {path: "editAcc/:Id/:Name/:Description/:Address/:Latitude/:Longitude/:AverageGrade/:Approved/:AccommodationTypeId/:ImageUrl",  
+    component: EditAccommodationComponent},
+  {path: "roomList/:AccommodationId/:AccommodationName", component: RoomListComponent},
+  {path: "room/:Id/:AccommodationName", component: RoomComponent}
 
 ]
 
@@ -38,7 +45,10 @@ const Routes= [
     EditAccTypeComponent,
     AccommodationComponent,
     AccommodationListComponent,
-    AddAccommodationComponent
+    AddAccommodationComponent,
+    EditAccommodationComponent,
+    RoomComponent,
+    RoomListComponent
    
   ],
   imports: [

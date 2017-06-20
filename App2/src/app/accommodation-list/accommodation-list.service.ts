@@ -13,7 +13,7 @@ export class AccommodationListService {
 
     getAll() : Observable<any> {
         let host = "localhost:54042";
-        return this.http.get(`http://${host}/api/Accommodations`);
+        return this.http.get(`http://${host}/api/Accommodations/` );
     }
 
    
