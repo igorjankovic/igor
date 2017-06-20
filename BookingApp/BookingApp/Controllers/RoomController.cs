@@ -37,6 +37,47 @@ namespace BookingApp.Controllers
 
             return Ok(room);
         }
+        [HttpPut]
+        [Route("Rooms/{id}")]
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PutRoom(int id, Room room)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != room.Id)
+            {
+                return BadRequest();
+            }
+
+            db.Entry(room).State = EntityState.Modified;
+
+
+            db.SaveChanges();
+
+            return Ok();
+
+        }
+        [HttpDelete]
+        [Route("Rooms/{id}")]
+        [ResponseType(typeof(Accommodation))]
+        public IHttpActionResult DeleteRoom(int id)
+        {
+            Room room = db.Rooms.Find(id);
+            if (room == null)
+            {
+                return NotFound();
+            }
+
+            db.Rooms.Remove(room);
+            db.SaveChanges();
+
+            return Ok(room);
+        }
+
+
 
         [HttpPost]
         [Route("Rooms")]
