@@ -18,7 +18,7 @@ const ChildRoutes = [
  ]
 const Routes= [
    {path: "accommodation/:Id", component: AccommodationComponent},
-  {path: "accommodationList/:Id/:Name/", component: AccommodationListComponent},
+  {path: "accommodationList/:Id/:Name", component: AccommodationListComponent},
   {path: "accommodationTypeList", component: AccommodationTypeListComponent},
   {path: "accommodationType/:Id/:Name", component: AccommodationTypeComponent},
   {path: "addAccType",  component: AddAccTypeComponent},

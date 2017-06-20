@@ -20,7 +20,7 @@ export class AccommodationListService {
 
     getByAccTypeId(id: number): Observable<any> {
          let host = "localhost:54042";
-        let urlAddress = `http://${host}/odata/AccOData`+ id;
+        let urlAddress = `http://${host}/api/Accommodations/`+ id;
         return this.http.get(urlAddress);
     }
 

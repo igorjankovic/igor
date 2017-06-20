@@ -6,7 +6,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'accommodation-type',
   templateUrl: './accommodation-type.component.html',
-  styleUrls: ['./accommodation-type.component.css']
+  styleUrls: ['./accommodation-type.component.css'],
+  providers:[AccommodationTypeService]
+
 })
 export class AccommodationTypeComponent implements OnInit {
 
